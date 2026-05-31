@@ -1,0 +1,38 @@
+{
+    "name": "symfinity/ux-blocks",
+    "description": "UX Blocks base SDK — registry schema and Symfinity UI markup helpers for Symfony UX Twig components",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=8.2",
+        "symfony/framework-bundle": "^7.4",
+        "symfony/yaml": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5 || ^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symfinity\\UxBlocks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfinity\\UxBlocks\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "version": "0.1.0-dev",
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "suggest": {
+        "symfinity/ui-kernel": "Token-driven role CSS and flavours when building styled blocks",
+        "symfinity/ui-action": "Native HTTP action semantics for interactive blocks (layer 3)",
+        "symfony/ux-icons": "Icon set for roles that use ux:icon (optional per app)"
+    }
+}
