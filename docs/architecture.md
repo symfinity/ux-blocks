@@ -8,4 +8,4 @@ Base layer only — no production Twig components. Component packs (`ux-blocks-c
 |----------|-------|
 | Registry schema | `1.1` |
 | Default fragment prefix | `blocks` |
-| v0 roles | fourteen — see `V0RoleCatalog` |
+| core roles | fourteen — see `CoreRoleCatalog` |

@@ -8,7 +8,7 @@ Base SDK for the **UX Blocks** family — registry schema, v0 role catalog, and 
 ## Provides
 
 - `Symfinity\UxBlocks\Registry\RegistrySchema` — schema version, default prefix `blocks`, fragment helpers
-- `Symfinity\UxBlocks\Registry\V0RoleCatalog` — fourteen v0 role ids
+- `Symfinity\UxBlocks\Registry\CoreRoleCatalog` — fourteen core catalog role ids
 - `Symfinity\UxBlocks\Test\ChameleonMarkupAssertions` — trait for component DOM tests
 
 ## Consumers

@@ -7,7 +7,7 @@ namespace Symfinity\UxBlocks\Tests\Registry;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Symfinity\UxBlocks\Registry\RegistrySchema;
-use Symfinity\UxBlocks\Registry\V0RoleCatalog;
+use Symfinity\UxBlocks\Registry\CoreRoleCatalog;
 
 final class RegistrySchemaTest extends TestCase
 {
@@ -26,6 +26,6 @@ final class RegistrySchemaTest extends TestCase
     #[Test]
     public function v0CatalogHasFourteenRoles(): void
     {
-        self::assertCount(14, V0RoleCatalog::roles());
+        self::assertCount(14, CoreRoleCatalog::roles());
     }
 }
