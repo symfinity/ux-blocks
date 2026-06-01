@@ -1,0 +1,8 @@
+package_major: "0.1"
+sidebar:
+  - architecture
+slices:
+  - symfony: "7.4"
+    sources: [architecture.md]
+  - symfony: "8.0"
+    sources: [architecture.md]

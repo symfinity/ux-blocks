@@ -2,8 +2,10 @@
 
 Base SDK for the **UX Blocks** family — registry schema, v0 role catalog, and shared Chameleon markup test helpers.
 
+<!-- autodocs:section id=description -->
 **Design:** [PRODUCT-ux-blocks-family](../../../classified/explore/PRODUCT-ux-blocks-family.md)  
 **Feature:** [symfinity 003 — ux-component-catalog](../../../specs/symfinity/symfinity/3-ux-component-catalog/spec.md)
+<!-- /autodocs:section -->
 
 ## Provides
 
@@ -18,6 +20,17 @@ Base SDK for the **UX Blocks** family — registry schema, v0 role catalog, and 
 ## Optional Twig prefix
 
 Consumers may set `name_prefix: st` under `twig_component.defaults` for `Symfinity\UxBlocksCore\Twig\Components\` to render `<twig:st:Alert />` instead of `<twig:Alert />`.
+
+<!-- autodocs:section id=install -->
+```bash
+composer require symfinity/ux-blocks
+```
+<!-- /autodocs:section -->
+
+<!-- autodocs:section id=requirements -->
+- PHP >=8.2
+- Symfony Framework Bundle ^7.4 or ^8.0
+<!-- /autodocs:section -->
 
 ## Test
 
