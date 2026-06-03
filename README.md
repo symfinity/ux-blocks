@@ -3,8 +3,7 @@
 Base SDK for the **UX Blocks** family — registry schema, v0 role catalog, and shared Chameleon markup test helpers.
 
 <!-- autodocs:section id=description -->
-**Design:** [PRODUCT-ux-blocks-family](../../../classified/explore/PRODUCT-ux-blocks-family.md)  
-**Feature:** [symfinity 003 — ux-component-catalog](../../../specs/symfinity/symfinity/3-ux-component-catalog/spec.md)
+UX Blocks base SDK — registry schema and Symfinity UI markup helpers for Symfony UX Twig components
 <!-- /autodocs:section -->
 
 ## Provides
@@ -29,7 +28,7 @@ composer require symfinity/ux-blocks
 
 <!-- autodocs:section id=requirements -->
 - PHP >=8.2
-- Symfony Framework Bundle ^7.4 or ^8.0
+- UX Blocks base SDK — registry schema and Symfinity UI markup helpers for Symfony UX Twig components
 <!-- /autodocs:section -->
 
 ## Test
