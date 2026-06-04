@@ -40,6 +40,7 @@ final class ExtendedRoleCatalog
             'carousel-interactive',
             'rating',
             'filter-chips',
+            'table-of-contents',
         ];
     }
 }

@@ -1,0 +1,27 @@
+composer_name: symfinity/ux-blocks
+package_major: "0.x"
+
+sidebar:
+  - architecture
+  - components
+  - configuration
+  - installation
+  - quickstart
+  - reference
+  - troubleshooting
+  - upgrade
+  - usage
+
+slices:
+  - symfony: "7.4"
+    sources:
+      - architecture.md
+      - components.md
+      - configuration.md
+      - index.md
+      - installation.md
+      - quickstart.md
+      - reference.md
+      - troubleshooting.md
+      - upgrade.md
+      - usage.md

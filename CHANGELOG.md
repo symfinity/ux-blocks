@@ -1,9 +1,15 @@
 # Changelog
 
-All notable changes to this project are documented here.
+All changes to **symfinity/ux-blocks** are currently on `main` (unreleased, untagged).
 
-## Unreleased
+## [Unreleased]
 
-- ux-blocks updated (63f1af1)
-- ux-blocks-* updated (c6e603b)
-- ux-blocks added (68aa215)
+### Added
+
+- Symfony bundle `SymfinityUxBlocksBundle` for integration
+- Module `Registry`
+- Module `Test`
+- Package configuration under `config/`
+- Ux-blocks updated
+- Ux-blocks-* updated
+- Ux-blocks added

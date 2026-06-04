@@ -1,6 +1,6 @@
 # Architecture — symfinity/ux-blocks
 
-**Family:** [PRODUCT-ux-blocks-family](../../../classified/explore/PRODUCT-ux-blocks-family.md)
+**Family:** PRODUCT-ux-blocks-family
 
 Base layer only — no production Twig components. Component packs (`ux-blocks-core`, commercial `{brand}` packs) depend on this package for registry vocabulary and test helpers.
 
