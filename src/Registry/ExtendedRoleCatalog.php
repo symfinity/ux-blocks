@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Symfinity\UxBlocks\Registry;
 
 /**
- * Canonical role ids for symfinity/ux-blocks-extended (symfinity 025).
+ * Canonical compound role ids for symfinity/ux-blocks-extended (symfinity 054).
  *
  * @return list<string>
  */
@@ -15,32 +15,34 @@ final class ExtendedRoleCatalog
     public static function roles(): array
     {
         return [
-            'tabs',
-            'alert-dialog-enhanced',
-            'drawer',
-            'sheet',
-            'dropdown-menu',
-            'combobox',
-            'slider',
-            'toggle',
-            'toggle-group',
-            'calendar',
-            'date-picker',
-            'input-otp',
-            'sidebar',
-            'stacked-layout-interactive',
-            'command-palette',
-            'toast',
-            'context-menu',
-            'hover-card',
-            'resizable',
-            'menubar',
-            'navigation-menu',
+            'field',
+            'fieldset',
+            'radio-group',
+            'input-group',
+            'button-group',
+            'card',
+            'table',
+            'alert',
+            'grid',
+            'stack',
+            'list',
+            'description-list',
+            'stat',
+            'timeline',
+            'accordion',
+            'carousel',
+            'dialog',
+            'popover',
+            'tooltip',
+            'navbar',
+            'breadcrumb',
+            'steps',
+            'pagination',
+            'page-heading',
+            'section-heading',
+            'auth-layout',
+            'dashboard-shell',
             'data-table-chrome',
-            'carousel-interactive',
-            'rating',
-            'filter-chips',
-            'table-of-contents',
         ];
     }
 }

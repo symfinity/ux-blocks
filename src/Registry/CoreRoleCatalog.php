@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Symfinity\UxBlocks\Registry;
 
 /**
- * Canonical role ids for symfinity/ux-blocks-core (symfinity 003).
- *
- * Future sibling catalogs: FullRoleCatalog, LabRoleCatalog, …
+ * Canonical atom role ids for symfinity/ux-blocks-core (symfinity 054).
  *
  * @return list<string>
  */
@@ -17,20 +15,28 @@ final class CoreRoleCatalog
     public static function roles(): array
     {
         return [
-            'button',
-            'separator',
             'typography',
-            'card',
-            'empty',
-            'table',
-            'alert',
+            'button',
             'label',
             'input',
             'textarea',
-            'select',
-            'field',
             'checkbox',
-            'radio-group',
+            'select',
+            'switch',
+            'file-input',
+            'separator',
+            'divider',
+            'aspect-ratio',
+            'scroll-area',
+            'badge',
+            'avatar',
+            'kbd',
+            'link',
+            'progress',
+            'spinner',
+            'skeleton',
+            'empty',
+            'image',
         ];
     }
 }

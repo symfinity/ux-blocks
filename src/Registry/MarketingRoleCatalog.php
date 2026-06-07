@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Symfinity\UxBlocks\Registry;
 
 /**
- * Canonical role ids for symfinity/ux-blocks-marketing (symfinity 026).
+ * Canonical role ids for symfinity/ux-blocks-marketing (symfinity 026 + 048 R2).
  *
  * @return list<string>
  */
@@ -33,6 +33,10 @@ final class MarketingRoleCatalog
             'header-marketing',
             'flyout-menu-marketing',
             'error-page-404',
+            'comparison-section',
+            'integrations-section',
+            'cookie-consent',
+            'status-band',
         ];
     }
 
@@ -57,6 +61,10 @@ final class MarketingRoleCatalog
             'header-marketing' => 'HeaderMarketing',
             'flyout-menu-marketing' => 'FlyoutMenuMarketing',
             'error-page-404' => 'ErrorPage404',
+            'comparison-section' => 'ComparisonSection',
+            'integrations-section' => 'IntegrationsSection',
+            'cookie-consent' => 'CookieConsent',
+            'status-band' => 'StatusBand',
             default => throw new \InvalidArgumentException(sprintf('Unknown marketing role "%s"', $role)),
         };
     }

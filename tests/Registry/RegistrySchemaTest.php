@@ -24,8 +24,8 @@ final class RegistrySchemaTest extends TestCase
     }
 
     #[Test]
-    public function v0CatalogHasFourteenRoles(): void
+    public function coreCatalogHasTwentyTwoAtomRoles(): void
     {
-        self::assertCount(14, CoreRoleCatalog::roles());
+        self::assertCount(22, CoreRoleCatalog::roles());
     }
 }
