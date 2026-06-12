@@ -24,8 +24,9 @@ final class RegistrySchemaTest extends TestCase
     }
 
     #[Test]
-    public function coreCatalogHasTwentyTwoAtomRoles(): void
+    public function coreCatalogHasTwentyThreeAtomRolesIncludingFigure(): void
     {
-        self::assertCount(22, CoreRoleCatalog::roles());
+        self::assertCount(23, CoreRoleCatalog::roles());
+        self::assertContains('figure', CoreRoleCatalog::roles());
     }
 }

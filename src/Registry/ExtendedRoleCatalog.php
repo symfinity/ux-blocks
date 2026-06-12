@@ -17,7 +17,6 @@ final class ExtendedRoleCatalog
         return [
             'field',
             'fieldset',
-            'radio-group',
             'input-group',
             'button-group',
             'card',

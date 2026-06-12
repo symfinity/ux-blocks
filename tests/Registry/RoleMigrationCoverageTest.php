@@ -30,8 +30,8 @@ final class RoleMigrationCoverageTest extends TestCase
     #[Test]
     public function tierCatalogsHaveExpectedCounts(): void
     {
-        self::assertCount(22, CoreRoleCatalog::roles());
-        self::assertCount(28, ExtendedRoleCatalog::roles());
+        self::assertCount(24, CoreRoleCatalog::roles());
+        self::assertCount(27, ExtendedRoleCatalog::roles());
         self::assertCount(30, LiveRoleCatalog::roles());
     }
 
@@ -44,7 +44,7 @@ final class RoleMigrationCoverageTest extends TestCase
             LiveRoleCatalog::roles(),
         );
 
-        self::assertCount(80, $union);
+        self::assertCount(81, $union);
         self::assertSame($union, array_values(array_unique($union)));
     }
 }

@@ -21,6 +21,7 @@ final class CoreRoleCatalog
             'input',
             'textarea',
             'checkbox',
+            'radio-group',
             'select',
             'switch',
             'file-input',
@@ -37,6 +38,7 @@ final class CoreRoleCatalog
             'skeleton',
             'empty',
             'image',
+            'figure',
         ];
     }
 }
