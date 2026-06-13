@@ -1,20 +1,13 @@
 <div align="center">
 
-# Ux Blocks
+# UX Blocks
 
-### UX Blocks base SDK — registry schema and Symfinity UI markup helpers for Symfony UX Twig components
+### Registry schema and shared test helpers for the Symfony UX Blocks component family
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat&logo=php&logoColor=white)](composer.json)
 [![Symfony](https://img.shields.io/badge/Symfony-7.4+-343434?style=flat&logo=symfony&logoColor=white)](composer.json)
-
 <br/>
-[![PHPUnit](https://github.com/symfinity/symfinity/actions/workflows/phpunit.yml/badge.svg)](https://github.com/symfinity/symfinity/actions/workflows/phpunit.yml)
-[![Coverage](https://github.com/symfinity/symfinity/actions/workflows/coverage.yml/badge.svg)](https://github.com/symfinity/symfinity/actions/workflows/coverage.yml)
-[![PHPStan](https://github.com/symfinity/symfinity/actions/workflows/phpstan.yml/badge.svg)](https://github.com/symfinity/symfinity/actions/workflows/phpstan.yml)
-<br/>
-[![Psalm](https://github.com/symfinity/symfinity/actions/workflows/psalm.yml/badge.svg)](https://github.com/symfinity/symfinity/actions/workflows/psalm.yml)
-[![Infection](https://github.com/symfinity/symfinity/actions/workflows/infection.yml/badge.svg)](https://github.com/symfinity/symfinity/actions/workflows/infection.yml)
-[![Code Style](https://img.shields.io/badge/code%20style-CS%20Fixer-5c4dbc?style=flat)](https://github.com/symfinity/symfinity/actions/workflows/php-cs-fixer.yml)
+[![CI](https://github.com/symfinity/ux-blocks/actions/workflows/ci.yml/badge.svg)](https://github.com/symfinity/ux-blocks/actions/workflows/ci.yml)
 <br/>
 [![Release](https://img.shields.io/packagist/v/symfinity/ux-blocks.svg?style=flat&logo=packagist&logoColor=white)](https://packagist.org/packages/symfinity/ux-blocks)
 [![Downloads](https://img.shields.io/packagist/dt/symfinity/ux-blocks.svg?style=flat&logo=packagist&logoColor=white)](https://packagist.org/packages/symfinity/ux-blocks)
@@ -22,47 +15,65 @@
 
 </div>
 
----
+> [!NOTE]
+> **Read-only mirror.** See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Documentation
+## Features
 
-| Topic | Page |
-|-------|------|
-| Architecture | [docs/architecture.md](docs/architecture.md) |
-| Components | [docs/components.md](docs/components.md) |
-| Configuration | [docs/configuration.md](docs/configuration.md) |
-| Index | [docs/index.md](docs/index.md) |
-| Installation | [docs/installation.md](docs/installation.md) |
-| Quickstart | [docs/quickstart.md](docs/quickstart.md) |
-| Reference | [docs/reference.md](docs/reference.md) |
-| Troubleshooting | [docs/troubleshooting.md](docs/troubleshooting.md) |
-| Upgrade | [docs/upgrade.md](docs/upgrade.md) |
-| Usage | [docs/usage.md](docs/usage.md) |
+- **Registry schema** — version `1.1`, default prefix `blocks`, fragment id helpers
+- **Tier role catalogs** — canonical role lists for core, extended, interactive, live, marketing, ecommerce, and lab packages
+- **PHPUnit assertions** — `ChameleonMarkupAssertions` for `data-ui-role` / `data-ui-fragment` DOM checks
+- **Slim SDK boundary** — no Twig components here; tiers ship in `symfinity/ux-blocks-*` packages
+- **Symfony Flex recipe** — bundle registered for all environments
 
-## Requirements
+## Prerequisites
 
-- PHP 8.2+
-- Symfony 7.4+ (Flex recipe when available)
+Add the [symfinity/recipes](https://github.com/symfinity/recipes) Flex endpoint to your project's `composer.json` (see [recipes README](https://github.com/symfinity/recipes/blob/main/README.md)) — recipes are not in Symfony's official recipe repository yet.
 
-## Install
+## Installation
 
 ```bash
 composer require symfinity/ux-blocks
 ```
 
-## Provides
+Usually installed as a dependency of a tier package. See [Installation](docs/installation.md).
 
-- `Symfinity\UxBlocks\Registry\RegistrySchema` — schema version, default prefix `blocks`, fragment helpers
-- `Symfinity\UxBlocks\Registry\CoreRoleCatalog` — fourteen core catalog role ids
-- `Symfinity\UxBlocks\Test\ChameleonMarkupAssertions` — trait for component DOM tests
+## Quick Start
 
-## Test
+```php
+use Symfinity\UxBlocks\Registry\CoreRoleCatalog;
+use Symfinity\UxBlocks\Registry\RegistrySchema;
 
-From product monorepo root:
+$fragment = RegistrySchema::fragmentId('button'); // blocks.button
+$roles = CoreRoleCatalog::roles();
+```
 
 ```bash
-cd src/symfinity
-make test
-# or per-package:
-docker compose --env-file .env.docker run --rm -T -w /app/packages/ux-blocks php php vendor/bin/phpunit
+composer require symfinity/ux-blocks-core
 ```
+
+See [Quick start](docs/quickstart.md) for PHPUnit markup assertions and tier pairing.
+
+## Documentation
+
+- **[Quick start](docs/quickstart.md)** — registry helpers and test trait
+- **[Installation](docs/installation.md)** — Flex and manual setup
+- **[Configuration](docs/configuration.md)** — no app YAML required
+- **[Registry](docs/registry.md)** — schema, catalogs, markup contract
+- **[Components](docs/components.md)** — tier packages and styling
+- **[Upgrade](docs/upgrade.md)** — first release notes
+
+## Requirements
+
+- PHP 8.2 or higher
+- Symfony 7.4 or 8.x
+
+## Support
+
+- [GitHub Issues](https://github.com/symfinity/ux-blocks/issues)
+- [Security](.github/SECURITY.md)
+- [Contributing](CONTRIBUTING.md)
+
+## License
+
+[MIT](LICENSE)

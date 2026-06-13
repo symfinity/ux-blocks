@@ -1,21 +1,32 @@
 # UX Blocks components
 
-## Family overview
+The **UX Blocks** family ships Symfony UX Twig components in tier packages. **symfinity/ux-blocks** (this repo) is the SDK only — no production Twig components here.
 
-The **UX Blocks** family ships Symfony UX Twig components in tier packages. This page is the cross-package index; per-role handbooks live on each tier (`ux-blocks-core`, `ux-blocks-extended`, …).
+## Tier packages
 
-| Tier | Package | Handbook |
-|------|---------|----------|
-| Core | `symfinity/ux-blocks-core` | [ux-blocks-core /components](/ux-blocks-core/components) |
-| Extended | `symfinity/ux-blocks-extended` | [ux-blocks-extended /components](/ux-blocks-extended/components) |
-| Marketing | `symfinity/ux-blocks-marketing` | [ux-blocks-marketing /components](/ux-blocks-marketing/components) |
-| Ecommerce | `symfinity/ux-blocks-ecommerce` | [ux-blocks-ecommerce /components](/ux-blocks-ecommerce/components) |
-| Lab | `symfinity/ux-blocks-lab` | [ux-blocks-lab /components](/ux-blocks-lab/components) (optional) |
+| Tier | Package | Role |
+|------|---------|------|
+| Core | [symfinity/ux-blocks-core](https://github.com/symfinity/ux-blocks-core) | Atoms — buttons, inputs, typography, … |
+| Extended | [symfinity/ux-blocks-extended](https://github.com/symfinity/ux-blocks-extended) | Compounds — cards, alerts, tables, … |
+| Interactive | [symfinity/ux-blocks-interactive](https://github.com/symfinity/ux-blocks-interactive) | Progressive enhancement (Stimulus) |
+| Live | [symfinity/ux-blocks-live](https://github.com/symfinity/ux-blocks-live) | Live Components |
+| Marketing | [symfinity/ux-blocks-marketing](https://github.com/symfinity/ux-blocks-marketing) | Landing sections |
+| Ecommerce | [symfinity/ux-blocks-ecommerce](https://github.com/symfinity/ux-blocks-ecommerce) | Shop patterns |
+| Lab | [symfinity/ux-blocks-lab](https://github.com/symfinity/ux-blocks-lab) | Experimental roles (dev/test) |
 
-## SDK
+Install tiers as needed. All depend on this SDK for registry vocabulary.
 
-Registry schema and shared test helpers: [architecture](architecture.md).
+## Styling
 
-## Left nav
+- **[symfinity/ui-kernel](https://github.com/symfinity/ui-kernel)** — design tokens and generated theme CSS
+- **Tier packages** — `[data-ui-role]` rules scoped per package (not in ui-kernel)
 
-On tier handbooks with `handbook_family: ux-blocks`, the **Components** group in the left sidebar links here for **Overview**, then lists each tier and role (handbook-sidebar-nested).
+## SDK surface (this package)
+
+- [Registry](registry.md) — schema version, fragment helpers, tier catalogs
+- `Symfinity\UxBlocks\Test\ChameleonMarkupAssertions` — PHPUnit DOM checks
+
+## See also
+
+- [Quick start](quickstart.md)
+- [Installation](installation.md)

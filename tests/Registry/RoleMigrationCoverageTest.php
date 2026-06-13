@@ -7,44 +7,76 @@ namespace Symfinity\UxBlocks\Tests\Registry;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Symfinity\UxBlocks\Registry\CoreRoleCatalog;
+use Symfinity\UxBlocks\Registry\EcommerceRoleCatalog;
 use Symfinity\UxBlocks\Registry\ExtendedRoleCatalog;
+use Symfinity\UxBlocks\Registry\InteractiveRoleCatalog;
+use Symfinity\UxBlocks\Registry\LabRoleCatalog;
 use Symfinity\UxBlocks\Registry\LiveRoleCatalog;
+use Symfinity\UxBlocks\Registry\MarketingRoleCatalog;
 
 /**
- * symfinity 054 — each post-cutover role belongs to exactly one tier catalog.
+ * Each role id belongs to exactly one tier catalog across the UX Blocks family.
  */
 final class RoleMigrationCoverageTest extends TestCase
 {
+    /** @return array<string, list<string>> */
+    private static function tierCatalogs(): array
+    {
+        return [
+            'core' => CoreRoleCatalog::roles(),
+            'extended' => ExtendedRoleCatalog::roles(),
+            'interactive' => InteractiveRoleCatalog::roles(),
+            'live' => LiveRoleCatalog::roles(),
+            'marketing' => MarketingRoleCatalog::roles(),
+            'ecommerce' => EcommerceRoleCatalog::roles(),
+            'lab' => LabRoleCatalog::roles(),
+        ];
+    }
+
     #[Test]
     public function tierCatalogsDoNotOverlap(): void
     {
-        $core = CoreRoleCatalog::roles();
-        $extended = ExtendedRoleCatalog::roles();
-        $live = LiveRoleCatalog::roles();
+        $catalogs = self::tierCatalogs();
+        $names = array_keys($catalogs);
 
-        self::assertSame([], array_intersect($core, $extended), 'core ∩ extended must be empty');
-        self::assertSame([], array_intersect($core, $live), 'core ∩ live must be empty');
-        self::assertSame([], array_intersect($extended, $live), 'extended ∩ live must be empty');
+        foreach ($names as $i => $left) {
+            for ($j = $i + 1, $c = count($names); $j < $c; ++$j) {
+                $right = $names[$j];
+                self::assertSame(
+                    [],
+                    array_intersect($catalogs[$left], $catalogs[$right]),
+                    sprintf('%s ∩ %s must be empty', $left, $right),
+                );
+            }
+        }
     }
 
     #[Test]
     public function tierCatalogsHaveExpectedCounts(): void
     {
-        self::assertCount(24, CoreRoleCatalog::roles());
-        self::assertCount(27, ExtendedRoleCatalog::roles());
-        self::assertCount(30, LiveRoleCatalog::roles());
+        $expected = [
+            'core' => 24,
+            'extended' => 27,
+            'interactive' => 25,
+            'live' => 5,
+            'marketing' => 22,
+            'ecommerce' => 10,
+            'lab' => 45,
+        ];
+
+        $catalogs = self::tierCatalogs();
+
+        foreach ($expected as $tier => $count) {
+            self::assertCount($count, $catalogs[$tier], $tier);
+        }
     }
 
     #[Test]
     public function unionCoversFullCatalogWithoutDuplicates(): void
     {
-        $union = array_merge(
-            CoreRoleCatalog::roles(),
-            ExtendedRoleCatalog::roles(),
-            LiveRoleCatalog::roles(),
-        );
+        $union = array_merge(...array_values(self::tierCatalogs()));
 
-        self::assertCount(81, $union);
+        self::assertCount(158, $union);
         self::assertSame($union, array_values(array_unique($union)));
     }
 }

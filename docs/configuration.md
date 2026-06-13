@@ -1,21 +1,23 @@
 # Configuration
 
-## Configuration files
+**symfinity/ux-blocks** has no application-level configuration file.
 
-`config/packages/symfinity_{slug}.yaml`
+## What the bundle loads
 
-## Options
+On boot, `SymfinityUxBlocksExtension` loads `config/services.yaml` from the package. Services use Symfony defaults (`autowire`, `autoconfigure`). There are no public parameters or env vars.
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| | | | |
+## App config
 
-## Environment variables
+You do **not** add `config/packages/symfinity_ux_blocks.yaml` unless you maintain a private fork. The Flex recipe registers the bundle only.
 
-| Variable | Description |
-|----------|-------------|
-| | |
+## Related packages
+
+| Package | Configuration |
+|---------|----------------|
+| [symfinity/ui-kernel](https://github.com/symfinity/ui-kernel) | `symfinity_ui_kernel` — themes and generated CSS |
+| [symfinity/ux-blocks-core](https://github.com/symfinity/ux-blocks-core) (and other tiers) | Component defaults in each tier bundle |
 
 ## See also
 
-[Usage](usage.md)
+- [Installation](installation.md)
+- [Registry](registry.md)

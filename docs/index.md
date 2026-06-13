@@ -1,15 +1,12 @@
-# Overview
+# UX Blocks handbook
 
-Package handbook for this library.
+**symfinity/ux-blocks** is the base SDK for the UX Blocks family: registry schema, tier role catalogs, and shared PHPUnit markup helpers. Twig components ship in separate tier packages (`symfinity/ux-blocks-core`, `symfinity/ux-blocks-extended`, …).
 
 ## Pages
 
 - [Installation](installation.md)
-- [Quickstart](quickstart.md)
+- [Quick start](quickstart.md)
 - [Configuration](configuration.md)
-- [Usage](usage.md)
-- [Upgrade](upgrade.md)
-- [Troubleshooting](troubleshooting.md)
-- [Reference](reference.md)
-- [Architecture](architecture.md)
+- [Registry](registry.md)
 - [Components](components.md)
+- [Upgrade](upgrade.md)

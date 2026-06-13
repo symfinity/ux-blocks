@@ -1,14 +1,39 @@
 {
     "name": "symfinity/ux-blocks",
     "description": "UX Blocks base SDK — registry schema and Symfinity UI markup helpers for Symfony UX Twig components",
-    "license": "MIT",
     "type": "symfony-bundle",
+    "license": "MIT",
+    "homepage": "https://github.com/symfinity/ux-blocks",
+    "support": {
+        "issues": "https://github.com/symfinity/ux-blocks/issues",
+        "source": "https://github.com/symfinity/ux-blocks"
+    },
+    "authors": [
+        {
+            "name": "Symfinity",
+            "email": "dev@symfinity.net",
+            "homepage": "https://symfinity.net/"
+        }
+    ],
+    "keywords": [
+        "symfony",
+        "symfony-bundle",
+        "ux-blocks",
+        "twig-components",
+        "design-system",
+        "registry"
+    ],
     "require": {
         "php": ">=8.2",
+        "symfony/config": "^7.4||^8.0",
+        "symfony/dependency-injection": "^7.4||^8.0",
         "symfony/framework-bundle": "^7.4||^8.0",
+        "symfony/http-kernel": "^7.4||^8.0",
         "symfony/yaml": "^7.4||^8.0"
     },
     "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-symfony": "^2.0",
         "phpunit/phpunit": "^10.5 || ^11.0"
     },
     "autoload": {
@@ -21,18 +46,26 @@
             "Symfinity\\UxBlocks\\Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "test": "phpunit"
+    "config": {
+        "sort-packages": true
     },
-    "version": "0.1.0-dev",
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse --memory-limit=512M"
+    },
     "extra": {
         "branch-alias": {
             "dev-main": "0.1.x-dev"
+        },
+        "symfony": {
+            "require": "^7.4||^8.0"
         }
     },
     "suggest": {
         "symfinity/ui-kernel": "Token-driven role CSS and flavours when building styled blocks",
-        "symfinity/ui-action": "Native HTTP action semantics for interactive blocks (layer 3)",
+        "symfinity/ui-action": "Native HTTP action semantics for interactive blocks",
         "symfony/ux-icons": "Icon set for roles that use ux:icon (optional per app)"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
