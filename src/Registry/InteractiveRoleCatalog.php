@@ -24,6 +24,7 @@ final class InteractiveRoleCatalog
             'slider',
             'toggle',
             'toggle-group',
+            'scheme-switch',
             'calendar',
             'input-otp',
             'sidebar',
@@ -40,6 +41,7 @@ final class InteractiveRoleCatalog
             'filter-chips',
             'table-of-contents',
             'tree-view',
+            'bento-box-panel-interactive',
         ];
     }
 }

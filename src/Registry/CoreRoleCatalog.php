@@ -36,9 +36,20 @@ final class CoreRoleCatalog
             'progress',
             'spinner',
             'skeleton',
-            'empty',
             'image',
             'figure',
+            'flash',
+            'flash-stack',
+            'page-heading',
+            'section-heading',
+            'grid',
+            'stack',
+            'list',
+            'breadcrumb',
+            'pagination',
+            'fieldset',
+            'input-group',
+            'button-group',
         ];
     }
 }

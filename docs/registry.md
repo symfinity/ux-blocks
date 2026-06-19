@@ -35,12 +35,31 @@ Each tier package ships Twig components for its catalog. Role lists live in this
 
 Each role id belongs to **exactly one** tier catalog. PHPUnit in this package guards overlap and coverage across tiers.
 
+## SSOT and export (106)
+
+Editable registry per tier: `config/ux_roles.yaml`. README inventory tables are generated between HTML markers:
+
+```text
+<!-- ux-blocks:registry:start -->
+…
+<!-- ux-blocks:registry:end -->
+```
+
+From the symfinity monorepo root:
+
+```bash
+php bin/console ux-blocks:registry-export --package=ux-blocks-core
+php bin/console ux-blocks:registry-export --check --package=ux-blocks-core
+```
+
+CI: fail PRs that touch `ux_roles.yaml` or README markers when `--check` reports drift.
+
 ## Markup contract
 
 Rendered components expose:
 
-- `data-ui-role="{role}"` — canonical role id from the catalog
-- `data-ui-fragment="{prefix}.{role}"` — stable fragment id for tests and diagnostics
+- `data-ui-role="{role}"` — injected by role attribute bridge from catalog lookup (wave 1: core)
+- `data-ui-fragment="{prefix}.{role}"` — optional; off by default (`symfinity_ux_blocks_core.fragment_ids: false`)
 
 Use [ChameleonMarkupAssertions](quickstart.md#2-assert-component-markup-in-tests) in tier package tests.
 

@@ -54,6 +54,30 @@ composer require symfinity/ux-blocks-core
 
 See [Quick start](docs/quickstart.md) for PHPUnit markup assertions and tier pairing.
 
+## Stage A consumer profile
+
+Stage A apps use Twig tags + optional ui-kernel theme. They do **not** need workshop, catalog-audit, or runtime/Turbo fragments.
+
+| Install | Packages |
+|---------|----------|
+| Headless | `symfinity/ux-blocks-core` |
+| Chameleon theme | `symfinity/ui-kernel` + `symfinity/ux-blocks-core` + `symfinity/ux-blocks` |
+
+- `data-ui-role` is injected by the role attribute bridge (wave 1: core).
+- `data-ui-fragment` is **off** by default (`symfinity_ux_blocks_core.fragment_ids: false`).
+- Maintainer contract: Symfinity org spec **106** Stage A consumer profile (`stage-a-consumer-contract`).
+- Dogfood smoke: `make dogfood-new SLUG=ux-blocks-core-lab` then `make dogfood-serve SLUG=ux-blocks-core-lab`.
+
+## Maintainer — registry export
+
+```bash
+# From symfinity monorepo root
+php bin/console ux-blocks:registry-export --package=ux-blocks-core
+php bin/console ux-blocks:registry-export --check --package=ux-blocks-core
+```
+
+SSOT: each tier `config/ux_roles.yaml`. README inventory lives between `ux-blocks:registry` markers only.
+
 ## Documentation
 
 - **[Quick start](docs/quickstart.md)** — registry helpers and test trait

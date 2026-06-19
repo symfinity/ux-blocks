@@ -24,9 +24,13 @@ final class RegistrySchemaTest extends TestCase
     }
 
     #[Test]
-    public function coreCatalogHasTwentyFourAtomRolesIncludingFigure(): void
+    public function coreCatalogHasThirtyFiveAtomRolesAfterFoundationMigration(): void
     {
-        self::assertCount(24, CoreRoleCatalog::roles());
+        self::assertCount(35, CoreRoleCatalog::roles());
         self::assertContains('figure', CoreRoleCatalog::roles());
+        self::assertContains('flash', CoreRoleCatalog::roles());
+        self::assertContains('flash-stack', CoreRoleCatalog::roles());
+        self::assertContains('grid', CoreRoleCatalog::roles());
+        self::assertNotContains('empty', CoreRoleCatalog::roles());
     }
 }

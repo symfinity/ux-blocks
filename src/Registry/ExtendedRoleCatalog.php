@@ -16,15 +16,9 @@ final class ExtendedRoleCatalog
     {
         return [
             'field',
-            'fieldset',
-            'input-group',
-            'button-group',
             'card',
             'table',
             'alert',
-            'grid',
-            'stack',
-            'list',
             'description-list',
             'stat',
             'timeline',
@@ -34,14 +28,12 @@ final class ExtendedRoleCatalog
             'popover',
             'tooltip',
             'navbar',
-            'breadcrumb',
             'steps',
-            'pagination',
-            'page-heading',
-            'section-heading',
             'auth-layout',
             'dashboard-shell',
             'data-table-chrome',
+            'empty',
+            'bento-box-panel',
         ];
     }
 }
