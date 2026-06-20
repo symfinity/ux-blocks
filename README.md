@@ -54,18 +54,35 @@ composer require symfinity/ux-blocks-core
 
 See [Quick start](docs/quickstart.md) for PHPUnit markup assertions and tier pairing.
 
-## Stage A consumer profile
+## Install profiles
 
-Stage A apps use Twig tags + optional ui-kernel theme. They do **not** need workshop, catalog-audit, or runtime/Turbo fragments.
+Stage A apps use Twig tags + optional ui-kernel theme. They do **not** need workshop, catalog-audit, or runtime/Turbo fragments. Pick the smallest profile that fits; **marketing, ecommerce, and lab are explicit opt-in** — never pulled in by `ux-blocks-full`.
 
-| Install | Packages |
-|---------|----------|
-| Headless | `symfinity/ux-blocks-core` |
-| Chameleon theme | `symfinity/ui-kernel` + `symfinity/ux-blocks-core` + `symfinity/ux-blocks` |
+| Profile | `composer require` | Use case |
+|---------|--------------------|----------|
+| **Headless atoms** | `symfinity/ux-blocks-core` | Custom CSS; no Chameleon theme |
+| **Chameleon app** | `symfinity/ui-kernel symfinity/ux-blocks-core` | Symfinity default styled atoms |
+| **Full app UI** | `symfinity/ux-blocks-full` | Admin/product shell (core + extended + interactive) |
+| **Full + live** | `symfinity/ux-blocks-full symfinity/ux-blocks-live` | Adds Turbo/LiveComponent tier |
+| **Vertical landing** | `… symfinity/ux-blocks-marketing` | Marketing sections — **opt-in** |
+| **Vertical shop** | `… symfinity/ux-blocks-ecommerce` | Shop sections — **opt-in** |
+| **Incubator lab** | `symfinity/ux-blocks-lab` | **Never** a production default; requires `ux-blocks-full` |
+| **Kiosk showroom** (dev) | `symfinity/ux-blocks-kiosk` | Maintainer browse: `/` → `/kiosk`; links to ui-lab / ux-workshop-lab |
+
+```bash
+# Headless atoms
+composer require symfinity/ux-blocks-core
+
+# Chameleon-styled app
+composer require symfinity/ui-kernel symfinity/ux-blocks-core
+
+# Full app UI (core + extended + interactive)
+composer require symfinity/ux-blocks-full
+```
 
 - `data-ui-role` is injected by the role attribute bridge (wave 1: core).
-- `data-ui-fragment` is **off** by default (`symfinity_ux_blocks_core.fragment_ids: false`).
-- Maintainer contract: Symfinity org spec **106** Stage A consumer profile (`stage-a-consumer-contract`).
+- `data-ui-fragment` is **off** by default (`symfinity_ux_blocks_core.fragment_ids: false`); enable for Stage B Turbo/runtime.
+- Maintainer contracts: Symfinity org spec **106** Stage A consumer profile (`stage-a-consumer-contract`) and **107** install profiles (`install-profiles`).
 - Dogfood smoke: `make dogfood-new SLUG=ux-blocks-core-lab` then `make dogfood-serve SLUG=ux-blocks-core-lab`.
 
 ## Maintainer — registry export

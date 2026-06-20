@@ -1,6 +1,6 @@
 {
     "name": "symfinity/ux-blocks",
-    "description": "UX Blocks base SDK — registry schema and Symfinity UI markup helpers for Symfony UX Twig components",
+    "description": "Registry schema and shared test helpers for the Symfinity UX Blocks component family",
     "type": "symfony-bundle",
     "license": "MIT",
     "homepage": "https://github.com/symfinity/ux-blocks",
@@ -65,8 +65,7 @@
     "suggest": {
         "symfinity/ui-kernel": "Token-driven role CSS and flavours when building styled blocks",
         "symfinity/ui-action": "Native HTTP action semantics for interactive blocks",
-        "symfony/ux-icons": "Icon set for roles that use ux:icon (optional per app)",
-        "symfinity/ui-themer": "Theme authoring for Chameleon apps (dev)"
+        "symfony/ux-icons": "Icon set for roles that use ux:icon (optional per app)"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
