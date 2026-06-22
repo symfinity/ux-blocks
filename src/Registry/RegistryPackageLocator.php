@@ -9,6 +9,7 @@ class RegistryPackageLocator
     /** @var list<string> */
     public const PACKAGE_SLUGS = [
         'ux-blocks-core',
+        'ux-blocks-form',
         'ux-blocks-extended',
         'ux-blocks-interactive',
         'ux-blocks-live',

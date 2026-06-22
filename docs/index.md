@@ -7,6 +7,7 @@
 - [Installation](installation.md)
 - [Quick start](quickstart.md)
 - [Configuration](configuration.md)
+- [Usage](usage.md)
 - [Registry](registry.md)
 - [Components](components.md)
 - [Upgrade](upgrade.md)

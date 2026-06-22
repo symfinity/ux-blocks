@@ -20,9 +20,10 @@
 
 ## Features
 
-- **Registry schema** — version `1.1`, default prefix `blocks`, fragment id helpers
+- **Registry schema** — version `1.4` with default fragment prefix `blocks`, modifier/scalar lexicons, and closed region vocabulary
+- **Composition language** — `CompositionLanguage`, `RoleLanguageDefinition`, and `LanguageConformance` helpers for tier registry rows
 - **Tier role catalogs** — canonical role lists for core, extended, interactive, live, marketing, ecommerce, and lab packages
-- **PHPUnit assertions** — `ChameleonMarkupAssertions` for `data-ui-role` / `data-ui-fragment` DOM checks
+- **PHPUnit assertions** — `ChameleonMarkupAssertions` for `data-ui-role` and `data-ui-fragment` DOM checks
 - **Slim SDK boundary** — no Twig components here; tiers ship in `symfinity/ux-blocks-*` packages
 - **Symfony Flex recipe** — bundle registered for all environments
 
@@ -38,7 +39,7 @@ composer require symfinity/ux-blocks
 
 Usually installed as a dependency of a tier package. See [Installation](docs/installation.md).
 
-## Quick Start
+## Quick start
 
 ```php
 use Symfinity\UxBlocks\Registry\CoreRoleCatalog;
@@ -56,18 +57,19 @@ See [Quick start](docs/quickstart.md) for PHPUnit markup assertions and tier pai
 
 ## Install profiles
 
-Stage A apps use Twig tags + optional ui-kernel theme. They do **not** need workshop, catalog-audit, or runtime/Turbo fragments. Pick the smallest profile that fits; **marketing, ecommerce, and lab are explicit opt-in** — never pulled in by `ux-blocks-full`.
+Pick the smallest profile that fits your app. **Marketing, ecommerce, and lab tiers are explicit opt-in** — they are never pulled in by `symfinity/ux-blocks-full`.
 
 | Profile | `composer require` | Use case |
 |---------|--------------------|----------|
 | **Headless atoms** | `symfinity/ux-blocks-core` | Custom CSS; no Chameleon theme |
+| **Headless + forms** | `symfinity/ux-blocks-core symfinity/ux-blocks-form` | Atoms plus form controls |
 | **Chameleon app** | `symfinity/ui-kernel symfinity/ux-blocks-core` | Symfinity default styled atoms |
-| **Full app UI** | `symfinity/ux-blocks-full` | Admin/product shell (core + extended + interactive) |
+| **Chameleon app + forms** | `symfinity/ui-kernel symfinity/ux-blocks-core symfinity/ux-blocks-form` | Typical CRUD apps |
+| **Full app UI** | `symfinity/ux-blocks-full` | Admin/product shell (core + form + extended + interactive) |
 | **Full + live** | `symfinity/ux-blocks-full symfinity/ux-blocks-live` | Adds Turbo/LiveComponent tier |
 | **Vertical landing** | `… symfinity/ux-blocks-marketing` | Marketing sections — **opt-in** |
 | **Vertical shop** | `… symfinity/ux-blocks-ecommerce` | Shop sections — **opt-in** |
-| **Incubator lab** | `symfinity/ux-blocks-lab` | **Never** a production default; requires `ux-blocks-full` |
-| **Kiosk showroom** (dev) | `symfinity/ux-blocks-kiosk` | Maintainer browse: `/` → `/kiosk`; links to ui-lab / ux-workshop-lab |
+| **Incubator lab** | `symfinity/ux-blocks-lab` | Experimental roles — **not** for production defaults |
 
 ```bash
 # Headless atoms
@@ -80,29 +82,18 @@ composer require symfinity/ui-kernel symfinity/ux-blocks-core
 composer require symfinity/ux-blocks-full
 ```
 
-- `data-ui-role` is injected by the role attribute bridge (wave 1: core).
-- `data-ui-fragment` is **off** by default (`symfinity_ux_blocks_core.fragment_ids: false`); enable for Stage B Turbo/runtime.
-- Maintainer contracts: Symfinity org spec **106** Stage A consumer profile (`stage-a-consumer-contract`) and **107** install profiles (`install-profiles`).
-- Dogfood smoke: `make dogfood-new SLUG=ux-blocks-core-lab` then `make dogfood-serve SLUG=ux-blocks-core-lab`.
-
-## Maintainer — registry export
-
-```bash
-# From symfinity monorepo root
-php bin/console ux-blocks:registry-export --package=ux-blocks-core
-php bin/console ux-blocks:registry-export --check --package=ux-blocks-core
-```
-
-SSOT: each tier `config/ux_roles.yaml`. README inventory lives between `ux-blocks:registry` markers only.
+- `data-ui-role` is injected by the role attribute bridge (core tier and above).
+- `data-ui-fragment` is **off** by default; enable in tier config when you need Turbo/runtime fragment ids.
 
 ## Documentation
 
 - **[Quick start](docs/quickstart.md)** — registry helpers and test trait
 - **[Installation](docs/installation.md)** — Flex and manual setup
 - **[Configuration](docs/configuration.md)** — no app YAML required
+- **[Usage](docs/usage.md)** — registry helpers and PHPUnit assertions
 - **[Registry](docs/registry.md)** — schema, catalogs, markup contract
 - **[Components](docs/components.md)** — tier packages and styling
-- **[Upgrade](docs/upgrade.md)** — first release notes
+- **[Upgrade](docs/upgrade.md)** — version migration
 
 ## Requirements
 

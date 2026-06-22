@@ -9,6 +9,7 @@ use PHPUnit\Framework\TestCase;
 use Symfinity\UxBlocks\Registry\CoreRoleCatalog;
 use Symfinity\UxBlocks\Registry\EcommerceRoleCatalog;
 use Symfinity\UxBlocks\Registry\ExtendedRoleCatalog;
+use Symfinity\UxBlocks\Registry\FormRoleCatalog;
 use Symfinity\UxBlocks\Registry\InteractiveRoleCatalog;
 use Symfinity\UxBlocks\Registry\LabRoleCatalog;
 use Symfinity\UxBlocks\Registry\LiveRoleCatalog;
@@ -24,6 +25,7 @@ final class RoleMigrationCoverageTest extends TestCase
     {
         return [
             'core' => CoreRoleCatalog::roles(),
+            'form' => FormRoleCatalog::roles(),
             'extended' => ExtendedRoleCatalog::roles(),
             'interactive' => InteractiveRoleCatalog::roles(),
             'live' => LiveRoleCatalog::roles(),
@@ -55,8 +57,9 @@ final class RoleMigrationCoverageTest extends TestCase
     public function tierCatalogsHaveExpectedCounts(): void
     {
         $expected = [
-            'core' => 35,
-            'extended' => 19,
+            'core' => 25,
+            'form' => 17,
+            'extended' => 20,
             'interactive' => 27,
             'live' => 5,
             'marketing' => 22,
@@ -76,7 +79,7 @@ final class RoleMigrationCoverageTest extends TestCase
     {
         $union = array_merge(...array_values(self::tierCatalogs()));
 
-        self::assertCount(163, $union);
+        self::assertCount(171, $union);
         self::assertSame($union, array_values(array_unique($union)));
     }
 }

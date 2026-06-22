@@ -15,7 +15,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
     name: 'ux-blocks:registry-export',
-    description: 'Export ux_roles.yaml inventory to package README markers (106)',
+    description: 'Export ux_roles.yaml inventory to package README markers',
 )]
 final class RegistryExportCommand extends Command
 {
@@ -39,7 +39,8 @@ final class RegistryExportCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
         $check = (bool) $input->getOption('check');
-        $format = (string) $input->getOption('format');
+        $formatOption = $input->getOption('format');
+        $format = \is_string($formatOption) ? $formatOption : 'markdown';
         $package = $input->getOption('package');
         $package = \is_string($package) && '' !== $package ? $package : null;
         $monorepoRoot = $input->getOption('monorepo-root');

@@ -7,6 +7,14 @@
     <testsuites>
         <testsuite name="default">
             <directory>tests</directory>
+            <exclude>tests/Unit/DevTools</exclude>
+            <exclude>tests/Registry/TierCompositionLanguageRegistryTest.php</exclude>
+            <exclude>tests/Registry/CompositionLanguageRegistryAuditorTest.php</exclude>
+        </testsuite>
+        <testsuite name="monorepo">
+            <directory>tests/Unit/DevTools</directory>
+            <file>tests/Registry/TierCompositionLanguageRegistryTest.php</file>
+            <file>tests/Registry/CompositionLanguageRegistryAuditorTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

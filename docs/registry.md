@@ -6,7 +6,7 @@ The UX Blocks registry defines stable role ids, fragment naming, and tier bounda
 
 | Item | Value |
 |------|-------|
-| Schema version | `RegistrySchema::VERSION` → `1.1` |
+| Schema version | `RegistrySchema::VERSION` → `1.4` (per-tier `ux_role_registry` in YAML; composition-language facets on **108**) |
 | Default fragment prefix | `blocks` |
 | Fragment id | `{prefix}.{role}` — e.g. `blocks.button` |
 | Fragment pattern | `{prefix}.{role}.{n}` — for lists and repeats |

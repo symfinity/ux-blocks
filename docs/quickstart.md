@@ -35,7 +35,7 @@ Constants:
 
 | Constant | Value |
 |----------|-------|
-| `RegistrySchema::VERSION` | `1.1` |
+| `RegistrySchema::VERSION` | `1.4` |
 | `RegistrySchema::DEFAULT_PREFIX` | `blocks` |
 
 ## 2. Assert component markup in tests
@@ -96,4 +96,4 @@ foreach (CoreRoleCatalog::roles() as $role) {
 - [Components](components.md) — family overview
 - [Configuration](configuration.md) — bundle wiring (no app YAML)
 
-See also [CHANGELOG.md](../CHANGELOG.md), [CONTRIBUTING.md](../CONTRIBUTING.md), and [GitHub Issues](https://github.com/symfinity/ux-blocks/issues).
+See also [CHANGELOG](https://github.com/symfinity/ux-blocks/blob/main/CHANGELOG.md), [Contributing](https://github.com/symfinity/ux-blocks/blob/main/CONTRIBUTING.md), and [GitHub Issues](https://github.com/symfinity/ux-blocks/issues).

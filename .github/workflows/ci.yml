@@ -1,7 +1,7 @@
 name: CI
 
 # Matrix: maintained PHP x maintained Symfony (floor 7.4.*).
-# Regenerated 2026-06-14 — refresh: split-mirror-docs/scripts/fetch-ci-matrix.sh --gha-json --package-php='>=8.2'
+# Regenerated 2026-06-23 — refresh: split-mirror-docs/scripts/fetch-ci-matrix.sh --gha-json --package-php='>=8.2'
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: mbstring, xml, ctype, iconv
+          extensions: mbstring, xml, ctype, iconv, intl, curl
           coverage: none
           tools: composer:v2
 
@@ -42,16 +42,18 @@ jobs:
         run: |
           composer require --no-update \
             symfony/config:^${{ matrix.symfony }} \
+            symfony/console:^${{ matrix.symfony }} \
             symfony/dependency-injection:^${{ matrix.symfony }} \
             symfony/framework-bundle:^${{ matrix.symfony }} \
             symfony/http-kernel:^${{ matrix.symfony }} \
+            symfony/process:^${{ matrix.symfony }} \
             symfony/yaml:^${{ matrix.symfony }}
 
       - name: Install dependencies
         run: composer update --prefer-dist --no-interaction --no-progress
 
       - name: PHPUnit
-        run: vendor/bin/phpunit --colors=always
+        run: vendor/bin/phpunit --testsuite default --colors=always
 
       - name: PHPStan
         run: vendor/bin/phpstan analyse --memory-limit=512M

@@ -15,7 +15,6 @@ final class ExtendedRoleCatalog
     public static function roles(): array
     {
         return [
-            'field',
             'card',
             'table',
             'alert',
@@ -34,6 +33,8 @@ final class ExtendedRoleCatalog
             'data-table-chrome',
             'empty',
             'bento-box-panel',
+            'app-shell',
+            'page-header',
         ];
     }
 }

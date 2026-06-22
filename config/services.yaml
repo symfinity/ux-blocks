@@ -2,3 +2,9 @@ services:
   _defaults:
     autowire: true
     autoconfigure: true
+
+  Symfinity\UxBlocks\:
+    resource: '../src/'
+    exclude:
+      - '../src/SymfinityUxBlocksBundle.php'
+      - '../src/DependencyInjection/'

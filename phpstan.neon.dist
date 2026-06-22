@@ -5,5 +5,6 @@ parameters:
     level: max
     paths:
         - src
-        - tests
     reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#Trait Symfinity\\UxBlocks\\Test\\.* is used zero times#'

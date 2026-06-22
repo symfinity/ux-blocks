@@ -37,4 +37,4 @@ composer require symfinity/ui-kernel
 
 ## Future releases
 
-See [CHANGELOG.md](../CHANGELOG.md) for version-to-version notes.
+See [CHANGELOG](https://github.com/symfinity/ux-blocks/blob/main/CHANGELOG.md) for version-to-version notes.

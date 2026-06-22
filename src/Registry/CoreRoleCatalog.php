@@ -17,14 +17,6 @@ final class CoreRoleCatalog
         return [
             'typography',
             'button',
-            'label',
-            'input',
-            'textarea',
-            'checkbox',
-            'radio-group',
-            'select',
-            'switch',
-            'file-input',
             'separator',
             'divider',
             'aspect-ratio',
@@ -47,8 +39,6 @@ final class CoreRoleCatalog
             'list',
             'breadcrumb',
             'pagination',
-            'fieldset',
-            'input-group',
             'button-group',
         ];
     }

@@ -6,7 +6,7 @@ namespace Symfinity\UxBlocks\Registry;
 
 final class RegistrySchema
 {
-    public const VERSION = '1.1';
+    public const VERSION = '1.4';
 
     public const DEFAULT_PREFIX = 'blocks';
 
