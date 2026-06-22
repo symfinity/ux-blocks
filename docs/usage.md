@@ -17,10 +17,10 @@ Tier packages ship their own role catalogs (`ExtendedRoleCatalog`, …). Export 
 ## PHPUnit markup assertions
 
 ```php
-use Symfinity\UxBlocks\Test\ChameleonMarkupAssertions;
+use Symfinity\UxBlocks\Test\BlocksMarkupAssertions;
 
-ChameleonMarkupAssertions::assertRole($crawler, 'button');
-ChameleonMarkupAssertions::assertFragment($crawler, 'blocks.button');
+BlocksMarkupAssertions::assertRole($crawler, 'button');
+BlocksMarkupAssertions::assertFragment($crawler, 'blocks.button');
 ```
 
 Use in tier package tests — see [Quick start](quickstart.md).

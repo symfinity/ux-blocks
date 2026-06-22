@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Registry schema version `1.1` with default fragment prefix `blocks`
 - Fragment helpers: `RegistrySchema::fragmentId()`, `RegistrySchema::fragmentPattern()`
 - Tier role catalog classes: `CoreRoleCatalog`, `ExtendedRoleCatalog`, `InteractiveRoleCatalog`, `LiveRoleCatalog`, `MarketingRoleCatalog`, `EcommerceRoleCatalog`, `LabRoleCatalog`
-- PHPUnit trait `ChameleonMarkupAssertions` for `data-ui-role` and `data-ui-fragment` DOM assertions
+- PHPUnit trait `BlocksMarkupAssertions` for `data-ui-role` and `data-ui-fragment` DOM assertions
 - Symfony Flex recipe `0.1` — bundle registered for all environments
 - Consumer handbook under `docs/`
 - Symfony 7.4 and 8.x compatibility (PHP 8.2+)

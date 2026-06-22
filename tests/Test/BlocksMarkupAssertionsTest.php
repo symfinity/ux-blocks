@@ -6,16 +6,16 @@ namespace Symfinity\UxBlocks\Tests\Test;
 
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Symfinity\UxBlocks\Test\ChameleonMarkupAssertions;
+use Symfinity\UxBlocks\Test\BlocksMarkupAssertions;
 
-final class ChameleonMarkupAssertionsTest extends TestCase
+final class BlocksMarkupAssertionsTest extends TestCase
 {
-    use ChameleonMarkupAssertions;
+    use BlocksMarkupAssertions;
 
     #[Test]
-    public function assertChameleonRootAcceptsValidMarkup(): void
+    public function assertBlocksRootAcceptsValidMarkup(): void
     {
-        $this->assertChameleonRoot(
+        $this->assertBlocksRoot(
             '<button data-ui-role="button" data-ui-fragment="blocks.button">Save</button>',
             'button',
             'blocks.button',
@@ -23,11 +23,11 @@ final class ChameleonMarkupAssertionsTest extends TestCase
     }
 
     #[Test]
-    public function assertChameleonRootRejectsLegacyHelperClasses(): void
+    public function assertBlocksRootRejectsLegacyHelperClasses(): void
     {
         $this->expectException(\PHPUnit\Framework\ExpectationFailedException::class);
 
-        $this->assertChameleonRoot(
+        $this->assertBlocksRoot(
             '<button data-ui-role="button" data-ui-fragment="blocks.button" class="html_cva">Save</button>',
             'button',
             'blocks.button',

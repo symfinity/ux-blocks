@@ -23,7 +23,7 @@
 - **Registry schema** — version `1.4` with default fragment prefix `blocks`, modifier/scalar lexicons, and closed region vocabulary
 - **Composition language** — `CompositionLanguage`, `RoleLanguageDefinition`, and `LanguageConformance` helpers for tier registry rows
 - **Tier role catalogs** — canonical role lists for core, extended, interactive, live, marketing, ecommerce, and lab packages
-- **PHPUnit assertions** — `ChameleonMarkupAssertions` for `data-ui-role` and `data-ui-fragment` DOM checks
+- **PHPUnit assertions** — `BlocksMarkupAssertions` for `data-ui-role` and `data-ui-fragment` DOM checks
 - **Slim SDK boundary** — no Twig components here; tiers ship in `symfinity/ux-blocks-*` packages
 - **Symfony Flex recipe** — bundle registered for all environments
 
@@ -61,10 +61,10 @@ Pick the smallest profile that fits your app. **Marketing, ecommerce, and lab ti
 
 | Profile | `composer require` | Use case |
 |---------|--------------------|----------|
-| **Headless atoms** | `symfinity/ux-blocks-core` | Custom CSS; no Chameleon theme |
+| **Headless atoms** | `symfinity/ux-blocks-core` | Custom CSS; no UI Kernel theme |
 | **Headless + forms** | `symfinity/ux-blocks-core symfinity/ux-blocks-form` | Atoms plus form controls |
-| **Chameleon app** | `symfinity/ui-kernel symfinity/ux-blocks-core` | Symfinity default styled atoms |
-| **Chameleon app + forms** | `symfinity/ui-kernel symfinity/ux-blocks-core symfinity/ux-blocks-form` | Typical CRUD apps |
+| **Kernel-styled app** | `symfinity/ui-kernel symfinity/ux-blocks-core` | Symfinity default styled atoms |
+| **Kernel-styled app + forms** | `symfinity/ui-kernel symfinity/ux-blocks-core symfinity/ux-blocks-form` | Typical CRUD apps |
 | **Full app UI** | `symfinity/ux-blocks-full` | Admin/product shell (core + form + extended + interactive) |
 | **Full + live** | `symfinity/ux-blocks-full symfinity/ux-blocks-live` | Adds Turbo/LiveComponent tier |
 | **Vertical landing** | `… symfinity/ux-blocks-marketing` | Marketing sections — **opt-in** |
@@ -75,7 +75,7 @@ Pick the smallest profile that fits your app. **Marketing, ecommerce, and lab ti
 # Headless atoms
 composer require symfinity/ux-blocks-core
 
-# Chameleon-styled app
+# Kernel-styled app
 composer require symfinity/ui-kernel symfinity/ux-blocks-core
 
 # Full app UI (core + extended + interactive)

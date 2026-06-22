@@ -17,7 +17,7 @@ Ensure the [symfinity/recipes](https://github.com/symfinity/recipes) Flex endpoi
 - Symfony bundle registered for all environments
 - Registry schema `1.1` with default prefix `blocks`
 - Tier role catalog classes (`CoreRoleCatalog`, `ExtendedRoleCatalog`, …)
-- `ChameleonMarkupAssertions` PHPUnit trait for component DOM tests
+- `BlocksMarkupAssertions` PHPUnit trait for component DOM tests
 - Consumer handbook under `docs/`
 
 ### Pair with tier packages

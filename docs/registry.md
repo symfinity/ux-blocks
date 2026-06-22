@@ -61,7 +61,7 @@ Rendered components expose:
 - `data-ui-role="{role}"` — injected by role attribute bridge from catalog lookup (wave 1: core)
 - `data-ui-fragment="{prefix}.{role}"` — optional; off by default (`symfinity_ux_blocks_core.fragment_ids: false`)
 
-Use [ChameleonMarkupAssertions](quickstart.md#2-assert-component-markup-in-tests) in tier package tests.
+Use [BlocksMarkupAssertions](quickstart.md#2-assert-component-markup-in-tests) in tier package tests.
 
 ## See also
 

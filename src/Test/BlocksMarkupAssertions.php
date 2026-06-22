@@ -9,9 +9,9 @@ use PHPUnit\Framework\Assert;
 /**
  * Shared DOM assertions for UX Blocks Twig component tests (used by ux-blocks-core).
  */
-trait ChameleonMarkupAssertions
+trait BlocksMarkupAssertions
 {
-    protected function assertChameleonRoot(string $html, string $role, string $fragment): void
+    protected function assertBlocksRoot(string $html, string $role, string $fragment): void
     {
         Assert::assertStringContainsString(sprintf('data-ui-role="%s"', $role), $html);
         Assert::assertStringContainsString(sprintf('data-ui-fragment="%s"', $fragment), $html);

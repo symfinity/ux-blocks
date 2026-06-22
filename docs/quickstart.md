@@ -50,17 +50,17 @@ declare(strict_types=1);
 namespace App\Tests\Twig\Components;
 
 use PHPUnit\Framework\TestCase;
-use Symfinity\UxBlocks\Test\ChameleonMarkupAssertions;
+use Symfinity\UxBlocks\Test\BlocksMarkupAssertions;
 
 final class ButtonComponentTest extends TestCase
 {
-    use ChameleonMarkupAssertions;
+    use BlocksMarkupAssertions;
 
     public function testButtonRootMarkup(): void
     {
         $html = '<button data-ui-role="button" data-ui-fragment="blocks.button">Save</button>';
 
-        $this->assertChameleonRoot($html, 'button', 'blocks.button');
+        $this->assertBlocksRoot($html, 'button', 'blocks.button');
     }
 }
 ```

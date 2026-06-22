@@ -24,7 +24,7 @@ Install tiers as needed. All depend on this SDK for registry vocabulary.
 ## SDK surface (this package)
 
 - [Registry](registry.md) — schema version, fragment helpers, tier catalogs
-- `Symfinity\UxBlocks\Test\ChameleonMarkupAssertions` — PHPUnit DOM checks
+- `Symfinity\UxBlocks\Test\BlocksMarkupAssertions` — PHPUnit DOM checks
 
 ## See also
 
