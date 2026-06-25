@@ -35,6 +35,19 @@ composer require symfinity/ui-kernel
 2. Confirm `composer show symfinity/ux-blocks` reports `^0.1`
 3. Clear Symfony cache in each environment after adding tier bundles
 
+## 0.1.3
+
+Patch release after [v0.1.2](https://github.com/symfinity/ux-blocks/releases/tag/v0.1.2). Adds `search-form` to `ExtendedRoleCatalog` (21 extended-tier role ids) — aligns SDK catalog with `symfinity/ux-blocks-extended` `config/ux_roles.yaml`.
+
+```bash
+composer update symfinity/ux-blocks
+```
+
+After upgrade:
+
+1. Bump tier constraints when you consume `SearchForm`: `symfinity/ux-blocks-extended` `^0.1.1` and `symfinity/ux-blocks` `^0.1.3`.
+2. Clear Symfony cache if you cache role catalog lists in dev.
+
 ## 0.1.2
 
 Patch release after [v0.1.1](https://github.com/symfinity/ux-blocks/releases/tag/v0.1.1). PHPUnit trait rename and handbook updates — no registry schema changes.
