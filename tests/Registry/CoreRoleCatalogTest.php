@@ -25,6 +25,6 @@ final class CoreRoleCatalogTest extends TestCase
         $yamlRoles = array_map(static fn ($role) => $role->role, $catalog->roles);
 
         self::assertSame(CoreRoleCatalog::roles(), $yamlRoles);
-        self::assertCount(26, $yamlRoles);
+        self::assertCount(25, $yamlRoles);
     }
 }

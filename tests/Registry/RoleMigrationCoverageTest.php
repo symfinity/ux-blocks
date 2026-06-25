@@ -57,9 +57,9 @@ final class RoleMigrationCoverageTest extends TestCase
     public function tierCatalogsHaveExpectedCounts(): void
     {
         $expected = [
-            'core' => 26,
+            'core' => 25,
             'form' => 17,
-            'extended' => 20,
+            'extended' => 21,
             'interactive' => 27,
             'live' => 5,
             'marketing' => 22,

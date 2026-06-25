@@ -35,6 +35,7 @@ final class ExtendedRoleCatalog
             'bento-box-panel',
             'app-shell',
             'page-header',
+            'search-form',
         ];
     }
 }
