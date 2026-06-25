@@ -39,6 +39,7 @@ final class CoreRoleCatalog
             'list',
             'breadcrumb',
             'pagination',
+            'search-form',
             'button-group',
         ];
     }

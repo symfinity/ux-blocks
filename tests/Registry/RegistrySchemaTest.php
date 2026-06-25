@@ -24,9 +24,9 @@ final class RegistrySchemaTest extends TestCase
     }
 
     #[Test]
-    public function coreCatalogHasTwentyFiveAtomRolesAfterFormMigration(): void
+    public function coreCatalogHasTwentySixAtomRolesAfterSearchFormRegistration(): void
     {
-        self::assertCount(25, CoreRoleCatalog::roles());
+        self::assertCount(26, CoreRoleCatalog::roles());
         self::assertContains('figure', CoreRoleCatalog::roles());
         self::assertContains('flash', CoreRoleCatalog::roles());
         self::assertContains('flash-stack', CoreRoleCatalog::roles());
