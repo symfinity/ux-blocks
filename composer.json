@@ -69,5 +69,6 @@
         "symfony/ux-icons": "Icon set for roles that use ux:icon (optional per app)"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "version": "0.1.3"
 }

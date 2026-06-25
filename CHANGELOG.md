@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2026-06-25
+
+### Added
+
+- **`search-form`** role id in `ExtendedRoleCatalog` (21 extended-tier roles) — aligns split CI with `symfinity/ux-blocks-extended` `config/ux_roles.yaml`
+
+### Notes
+
+- Requires `symfinity/ux-blocks-extended` split publish that ships the `SearchForm` role — bump consumer constraint to `^0.1.3`
+
 ## [0.1.2] - 2026-06-25
 
 ### Changed
