@@ -35,6 +35,27 @@ composer require symfinity/ui-kernel
 2. Confirm `composer show symfinity/ux-blocks` reports `^0.1`
 3. Clear Symfony cache in each environment after adding tier bundles
 
+## 0.1.2
+
+Patch release after [v0.1.1](https://github.com/symfinity/ux-blocks/releases/tag/v0.1.1). PHPUnit trait rename and handbook updates — no registry schema changes.
+
+```bash
+composer update symfinity/ux-blocks
+```
+
+After upgrade:
+
+1. In tests, replace `ChameleonMarkupAssertions` with `BlocksMarkupAssertions` (`Symfinity\UxBlocks\Test\BlocksMarkupAssertions`).
+2. Rename test imports from `ChameleonMarkupAssertionsTest` to `BlocksMarkupAssertionsTest` if you extended the example test.
+
+## 0.1.1
+
+Documentation patch after [v0.1.0](https://github.com/symfinity/ux-blocks/releases/tag/v0.1.0). README install profiles — no PHP API changes.
+
+```bash
+composer update symfinity/ux-blocks
+```
+
 ## Future releases
 
 See [CHANGELOG](https://github.com/symfinity/ux-blocks/blob/main/CHANGELOG.md) for version-to-version notes.

@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-06-25
+
+### Changed
+
+- **PHPUnit trait** — `ChameleonMarkupAssertions` renamed to `BlocksMarkupAssertions` (same `data-ui-role` and `data-ui-fragment` DOM assertions)
+- **PHPUnit test** — `ChameleonMarkupAssertionsTest` renamed to `BlocksMarkupAssertionsTest`
+- **Handbook** — new [docs/installation.md](docs/installation.md); README and docs cross-links refreshed (`components`, `quickstart`, `registry`, `upgrade`, `usage`)
+
+### Notes
+
+- No registry schema or public PHP API changes — rename and documentation patch
+- Update test imports: `use Symfinity\UxBlocks\Test\BlocksMarkupAssertions;`
+
 ## [0.1.1] - 2026-06-23
 
 ### Changed
