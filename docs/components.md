@@ -6,19 +6,15 @@ The **UX Blocks** family ships Symfony UX Twig components in tier packages. **sy
 
 | Tier | Package | Role |
 |------|---------|------|
-| Core | [symfinity/ux-blocks-core](https://github.com/symfinity/ux-blocks-core) | Atoms — buttons, inputs, typography, … |
-| Extended | [symfinity/ux-blocks-extended](https://github.com/symfinity/ux-blocks-extended) | Compounds — cards, alerts, tables, … |
-| Interactive | [symfinity/ux-blocks-interactive](https://github.com/symfinity/ux-blocks-interactive) | Progressive enhancement (Stimulus) |
-| Live | [symfinity/ux-blocks-live](https://github.com/symfinity/ux-blocks-live) | Live Components |
-| Marketing | [symfinity/ux-blocks-marketing](https://github.com/symfinity/ux-blocks-marketing) | Landing sections |
-| Ecommerce | [symfinity/ux-blocks-ecommerce](https://github.com/symfinity/ux-blocks-ecommerce) | Shop patterns |
-| Lab | [symfinity/ux-blocks-lab](https://github.com/symfinity/ux-blocks-lab) | Experimental roles (dev/test) |
+| Core | [symfinity/ux-blocks-core](https://packagist.org/packages/symfinity/ux-blocks-core) | Atoms — buttons, inputs, typography, … |
+| Extended | [symfinity/ux-blocks-extended](https://packagist.org/packages/symfinity/ux-blocks-extended) | Compounds — cards, alerts, tables, … |
+| Form | [symfinity/ux-blocks-form](https://packagist.org/packages/symfinity/ux-blocks-form) | Form domain controls and compounds |
 
 Install tiers as needed. All depend on this SDK for registry vocabulary.
 
 ## Styling
 
-- **[symfinity/ui-kernel](https://github.com/symfinity/ui-kernel)** — design tokens and generated theme CSS
+- **[symfinity/ui-kernel](https://packagist.org/packages/symfinity/ui-kernel)** — design tokens and generated theme CSS
 - **Tier packages** — `[data-ui-role]` rules scoped per package (not in ui-kernel)
 
 ## SDK surface (this package)

@@ -25,13 +25,13 @@ Each tier package ships Twig components for its catalog. Role lists live in this
 
 | Catalog class | Tier package |
 |---------------|--------------|
-| `CoreRoleCatalog` | [symfinity/ux-blocks-core](https://github.com/symfinity/ux-blocks-core) |
-| `ExtendedRoleCatalog` | [symfinity/ux-blocks-extended](https://github.com/symfinity/ux-blocks-extended) |
-| `InteractiveRoleCatalog` | [symfinity/ux-blocks-interactive](https://github.com/symfinity/ux-blocks-interactive) |
-| `LiveRoleCatalog` | [symfinity/ux-blocks-live](https://github.com/symfinity/ux-blocks-live) |
-| `MarketingRoleCatalog` | [symfinity/ux-blocks-marketing](https://github.com/symfinity/ux-blocks-marketing) |
-| `EcommerceRoleCatalog` | [symfinity/ux-blocks-ecommerce](https://github.com/symfinity/ux-blocks-ecommerce) |
-| `LabRoleCatalog` | [symfinity/ux-blocks-lab](https://github.com/symfinity/ux-blocks-lab) (optional, dev) |
+| `CoreRoleCatalog` | [symfinity/ux-blocks-core](https://packagist.org/packages/symfinity/ux-blocks-core) |
+| `ExtendedRoleCatalog` | [symfinity/ux-blocks-extended](https://packagist.org/packages/symfinity/ux-blocks-extended) |
+| `InteractiveRoleCatalog` | Interactive tier (not published on Packagist yet) |
+| `LiveRoleCatalog` | Live tier (not published on Packagist yet) |
+| `MarketingRoleCatalog` | Marketing tier (not published on Packagist yet) |
+| `EcommerceRoleCatalog` | Ecommerce tier (not published on Packagist yet) |
+| `LabRoleCatalog` | Lab tier (dev only; not published on Packagist yet) |
 
 Each role id belongs to **exactly one** tier catalog. PHPUnit in this package guards overlap and coverage across tiers.
 

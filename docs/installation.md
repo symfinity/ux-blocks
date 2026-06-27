@@ -38,7 +38,7 @@ The bundle has no public console commands. Confirm the package is present in `co
 
 ## Install profiles {#install-profiles}
 
-Pick the smallest profile that fits your app. **Marketing, ecommerce, and lab tiers are explicit opt-in** — they are never pulled in by `symfinity/ux-blocks-full`.
+Pick the smallest profile that fits your app.
 
 | Profile | `composer require` | Use case |
 |---------|--------------------|----------|
@@ -46,11 +46,8 @@ Pick the smallest profile that fits your app. **Marketing, ecommerce, and lab ti
 | **Headless + forms** | `symfinity/ux-blocks-core symfinity/ux-blocks-form` | Atoms plus form controls |
 | **Kernel-styled app** | `symfinity/ui-kernel symfinity/ux-blocks-core` | Symfinity default styled atoms |
 | **Kernel-styled app + forms** | `symfinity/ui-kernel symfinity/ux-blocks-core symfinity/ux-blocks-form` | Typical CRUD apps |
-| **Full app UI** | `symfinity/ux-blocks-full` | Admin/product shell (core + form + extended + interactive) |
-| **Full + live** | `symfinity/ux-blocks-full symfinity/ux-blocks-live` | Adds Turbo/LiveComponent tier |
-| **Vertical landing** | `… symfinity/ux-blocks-marketing` | Marketing sections — **opt-in** |
-| **Vertical shop** | `… symfinity/ux-blocks-ecommerce` | Shop sections — **opt-in** |
-| **Incubator lab** | `symfinity/ux-blocks-lab` | Experimental roles — **not** for production defaults |
+| **Full app UI** | `symfinity/ux-blocks-full` | Complete official catalog (core + form + extended + interactive + live) |
+| **Full app UI + Chameleon** | `symfinity/ui-kernel symfinity/ux-blocks-full` | Symfinity styled complete catalog |
 
 ```bash
 # Headless atoms
@@ -59,8 +56,11 @@ composer require symfinity/ux-blocks-core
 # Kernel-styled app
 composer require symfinity/ui-kernel symfinity/ux-blocks-core
 
-# Full app UI (core + extended + interactive)
+# Full app UI (complete catalog — one line)
 composer require symfinity/ux-blocks-full
+
+# Full app UI + Chameleon styling
+composer require symfinity/ui-kernel symfinity/ux-blocks-full
 ```
 
 - `data-ui-role` is injected by the role attribute bridge (core tier and above).
