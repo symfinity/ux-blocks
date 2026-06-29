@@ -54,7 +54,7 @@ See [Quick start](docs/quickstart.md) for PHPUnit markup assertions and tier pai
 
 ## Install profiles
 
-Pick the smallest profile that fits your app. Normative table: [install-profiles](../../specs/symfinity/symfinity/3-ux-component-catalog/contracts/install-profiles.md).
+Pick the smallest profile that fits your app. See [Install profiles](docs/installation.md#install-profiles) in the handbook.
 
 **Full app UI** — one line for the complete official catalog (core, form, extended, interactive, live):
 

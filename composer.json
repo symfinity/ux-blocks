@@ -68,6 +68,12 @@
         "symfinity/ui-action": "Native HTTP action semantics for interactive blocks",
         "symfony/ux-icons": "Icon set for roles that use ux:icon (optional per app)"
     },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/serotoninja"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

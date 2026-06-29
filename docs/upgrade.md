@@ -35,6 +35,19 @@ composer require symfinity/ui-kernel
 2. Confirm `composer show symfinity/ux-blocks` reports `^0.1`
 3. Clear Symfony cache in each environment after adding tier bundles
 
+## 0.1.4
+
+Patch release after [v0.1.3](https://github.com/symfinity/ux-blocks/releases/tag/v0.1.3). Handbook and README install-profile docs aligned with `symfinity/ux-blocks-full` — no PHP API changes.
+
+```bash
+composer update symfinity/ux-blocks
+```
+
+After upgrade:
+
+1. Prefer `composer require symfinity/ux-blocks-full` when you need core, form, extended, interactive, and live tiers together — see [Installation — install profiles](installation.md#install-profiles).
+2. Add `symfinity/ui-kernel` alongside full when you want Chameleon styling on the complete catalog.
+
 ## 0.1.3
 
 Patch release after [v0.1.2](https://github.com/symfinity/ux-blocks/releases/tag/v0.1.2). Adds `search-form` to `ExtendedRoleCatalog` (21 extended-tier role ids) — aligns SDK catalog with `symfinity/ux-blocks-extended` `config/ux_roles.yaml`.

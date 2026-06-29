@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2026-06-29
+
+### Changed
+
+- **README** — install profiles section documents `composer require symfinity/ux-blocks-full` for the complete official catalog; links to [docs/installation.md](docs/installation.md#install-profiles) instead of monorepo-only paths
+- **Handbook install profiles** — table and examples aligned with `symfinity/ux-blocks-full` (core, form, extended, interactive, live); **Full app UI + Chameleon** profile added (`symfinity/ui-kernel` + full metapackage)
+- **Handbook tier links** — [docs/components.md](docs/components.md) and [docs/registry.md](docs/registry.md) use Packagist URLs for published tier packages; form tier listed alongside core and extended
+- **Registry handbook** — publishing status notes for interactive, live, marketing, ecommerce, and lab tiers not yet on Packagist
+
+### Notes
+
+- No registry schema, catalog class, or PHPUnit API changes — documentation patch only
+- Pair with `symfinity/ux-blocks-full` ^0.1 when you want the five-tier catalog in one Composer line
+
 ## [0.1.3] - 2026-06-25
 
 ### Added
