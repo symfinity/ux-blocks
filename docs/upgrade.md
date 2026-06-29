@@ -48,6 +48,16 @@ After upgrade:
 1. Prefer `composer require symfinity/ux-blocks-full` when you need core, form, extended, interactive, and live tiers together — see [Installation — install profiles](installation.md#install-profiles).
 2. Add `symfinity/ui-kernel` alongside full when you want Chameleon styling on the complete catalog.
 
+## 0.1.5
+
+Maintenance release — public roadmap, sponsorship metadata, and split-mirror CI reliability. No registry schema, catalog, or PHPUnit API changes.
+
+```bash
+composer update symfinity/ux-blocks
+```
+
+No config or template changes required after upgrade.
+
 ## 0.1.3
 
 Patch release after [v0.1.2](https://github.com/symfinity/ux-blocks/releases/tag/v0.1.2). Adds `search-form` to `ExtendedRoleCatalog` (21 extended-tier role ids) — aligns SDK catalog with `symfinity/ux-blocks-extended` `config/ux_roles.yaml`.

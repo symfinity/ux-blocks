@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.5] - 2026-06-29
+
+### Changed
+
+- **Split mirror CI** — Composer package cache and `GITHUB_TOKEN` authentication so GitHub Actions reliably resolves `symfinity/*` dependencies across the PHP × Symfony matrix
+
+### Added
+
+- **ROADMAP.md** — public milestone table for the 0.1.x → 1.0.x SDK release line
+- **SUPPORTERS.md** — sponsor acknowledgment page for the split mirror ecosystem
+- Composer **`funding`** metadata and **`.github/FUNDING.yml`** for [GitHub Sponsors](https://github.com/sponsors/serotoninja)
+
+### Notes
+
+- No registry schema, catalog class, or PHPUnit API changes — documentation and CI maintenance patch
+- Upgrading from **0.1.4** needs no template or config edits
+
 ## [0.1.4] - 2026-06-29
 
 ### Changed
