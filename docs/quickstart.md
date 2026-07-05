@@ -95,5 +95,6 @@ foreach (CoreRoleCatalog::roles() as $role) {
 - [Registry](registry.md) — schema version and tier catalogs
 - [Components](components.md) — family overview
 - [Configuration](configuration.md) — bundle wiring (no app YAML)
+- [Verification](verification.md) — clean-app smoke
 
 See also [CHANGELOG](https://github.com/symfinity/ux-blocks/blob/main/CHANGELOG.md), [Contributing](https://github.com/symfinity/ux-blocks/blob/main/CONTRIBUTING.md), and [GitHub Issues](https://github.com/symfinity/ux-blocks/issues).

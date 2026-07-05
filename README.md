@@ -73,6 +73,7 @@ See [Installation](docs/installation.md#install-profiles) for headless, kernel-s
 - **[Registry](docs/registry.md)** — schema, catalogs, and markup contract
 - **[Components](docs/components.md)** — tier packages and styling
 - **[Upgrade](docs/upgrade.md)** — version migration
+- **[Verification](docs/verification.md)** — clean-app smoke and integration profile
 
 ## Requirements
 

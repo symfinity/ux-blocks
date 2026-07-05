@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.6] - 2026-07-05
+
+### Added
+
+- Handbook [Verification](docs/verification.md) — P0 integration profile, local `composer test` / `composer phpstan`, and clean-app smoke (`ux-blocks:registry-export`, `<twig:Button />` markup contract)
+- `integration_profile: P0` frontmatter on handbook index (OOTB consumer experience)
+
+### Changed
+
+- PHPUnit bootstrap: `tests/bootstrap.php` resolves monorepo or split-mirror Composer autoload (split CI parity)
+
+### Notes
+
+- No registry schema, catalog class, or PHPUnit API changes — documentation and test bootstrap hygiene
+- Upgrading from **0.1.5** needs no template or config edits
+
 ## [0.1.5] - 2026-06-29
 
 ### Changed

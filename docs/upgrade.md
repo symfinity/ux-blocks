@@ -1,5 +1,15 @@
 # Upgrade guide
 
+## 0.1.6
+
+No breaking changes. Patch release: OOTB consumer verification handbook, PHPUnit bootstrap for split mirrors, and handbook index integration profile.
+
+```bash
+composer update symfinity/ux-blocks
+```
+
+No config or template changes required after upgrade.
+
 ## First public release (`v0.1.0`)
 
 This is the first tagged release on Packagist and the read-only split mirror. There is no migration from a prior semver line.
