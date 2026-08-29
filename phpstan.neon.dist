@@ -1,0 +1,10 @@
+includes:
+    - vendor/phpstan/phpstan-symfony/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - src
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#Trait Symfinity\\UxBlocks\\Test\\.* is used zero times#'

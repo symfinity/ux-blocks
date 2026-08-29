@@ -1,0 +1,9 @@
+autodocs:
+  enabled:
+    - changelog
+    - readme
+  changelog:
+    path: CHANGELOG.md
+  readme:
+    path: README.md
+    regions: true

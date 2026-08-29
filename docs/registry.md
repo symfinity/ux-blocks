@@ -1,0 +1,69 @@
+# Registry
+
+The UX Blocks registry defines stable role ids, fragment naming, and tier boundaries shared by all component packages.
+
+## Schema
+
+| Item | Value |
+|------|-------|
+| Schema version | `RegistrySchema::VERSION` → `1.4` (per-tier `ux_role_registry` in YAML; composition-language facets on **108**) |
+| Default fragment prefix | `blocks` |
+| Fragment id | `{prefix}.{role}` — e.g. `blocks.button` |
+| Fragment pattern | `{prefix}.{role}.{n}` — for lists and repeats |
+
+```php
+use Symfinity\UxBlocks\Registry\RegistrySchema;
+
+RegistrySchema::fragmentId('alert');           // blocks.alert
+RegistrySchema::fragmentPattern('alert');      // blocks.alert.{n}
+RegistrySchema::fragmentId('alert', 'acme');   // acme.alert (custom prefix)
+```
+
+## Tier catalogs
+
+Each tier package ships Twig components for its catalog. Role lists live in this SDK as PHP catalogs (single source for tests and tooling):
+
+| Catalog class | Tier package |
+|---------------|--------------|
+| `CoreRoleCatalog` | [symfinity/ux-blocks-core](https://packagist.org/packages/symfinity/ux-blocks-core) |
+| `ExtendedRoleCatalog` | [symfinity/ux-blocks-extended](https://packagist.org/packages/symfinity/ux-blocks-extended) |
+| `InteractiveRoleCatalog` | Interactive tier (not published on Packagist yet) |
+| `LiveRoleCatalog` | Live tier (not published on Packagist yet) |
+| `MarketingRoleCatalog` | Marketing tier (not published on Packagist yet) |
+| `EcommerceRoleCatalog` | Ecommerce tier (not published on Packagist yet) |
+| `LabRoleCatalog` | Lab tier (dev only; not published on Packagist yet) |
+
+Each role id belongs to **exactly one** tier catalog. PHPUnit in this package guards overlap and coverage across tiers.
+
+## SSOT and export (106)
+
+Editable registry per tier: `config/ux_roles.yaml`. README inventory tables are generated between HTML markers:
+
+```text
+<!-- ux-blocks:registry:start -->
+…
+<!-- ux-blocks:registry:end -->
+```
+
+From the symfinity monorepo root:
+
+```bash
+php bin/console ux-blocks:registry-export --package=ux-blocks-core
+php bin/console ux-blocks:registry-export --check --package=ux-blocks-core
+```
+
+CI: fail PRs that touch `ux_roles.yaml` or README markers when `--check` reports drift.
+
+## Markup contract
+
+Rendered components expose:
+
+- `data-ui-role="{role}"` — injected by role attribute bridge from catalog lookup (wave 1: core)
+- `data-ui-fragment="{prefix}.{role}"` — optional; off by default (`symfinity_ux_blocks_core.fragment_ids: false`)
+
+Use [BlocksMarkupAssertions](quickstart.md#2-assert-component-markup-in-tests) in tier package tests.
+
+## See also
+
+- [Components](components.md) — family overview and handbooks
+- [Quick start](quickstart.md)
