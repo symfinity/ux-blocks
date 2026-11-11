@@ -26,7 +26,6 @@ final class ExtendedRoleCatalog
             'dialog',
             'popover',
             'tooltip',
-            'navbar',
             'steps',
             'auth-layout',
             'dashboard-shell',
