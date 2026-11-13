@@ -60,8 +60,14 @@ final class BlocksCssOutputNormalizer
     public function normalizeCss(string $css): string
     {
         foreach (self::QUOTED_ATTRIBUTES as $attribute) {
+            $quoted = preg_quote($attribute, '/');
             $css = (string) preg_replace(
-                '/\[' . preg_quote($attribute, '/') . '=([a-zA-Z0-9_-]+)\]/',
+                '/\[' . $quoted . '=([a-zA-Z0-9_-]+)\]/',
+                '[' . $attribute . '="$1"]',
+                $css,
+            );
+            $css = (string) preg_replace(
+                '/\[' . $quoted . '=\'([^\']+)\'\]/',
                 '[' . $attribute . '="$1"]',
                 $css,
             );

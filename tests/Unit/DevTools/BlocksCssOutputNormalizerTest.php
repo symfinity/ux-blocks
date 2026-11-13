@@ -22,6 +22,18 @@ final class BlocksCssOutputNormalizerTest extends TestCase
     }
 
     #[Test]
+    public function itRewritesSingleQuotedAttributeValues(): void
+    {
+        $normalizer = new BlocksCssOutputNormalizer();
+
+        $input = "[data-ui-role='button'][data-ui-variant='primary'] { color: red; }";
+        $expected = '[data-ui-role="button"][data-ui-variant="primary"] { color: red; }';
+
+        self::assertSame($expected, $normalizer->normalizeCss($input));
+        self::assertSame($expected, $normalizer->normalizeCss($expected));
+    }
+
+    #[Test]
     public function itIsIdempotentAndQuotesAlignAttribute(): void
     {
         $normalizer = new BlocksCssOutputNormalizer();

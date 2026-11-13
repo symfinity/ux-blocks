@@ -33,7 +33,6 @@ final class ExtendedRoleCatalog
             'empty',
             'bento-box-panel',
             'app-shell',
-            'page-header',
             'search-form',
         ];
     }

@@ -59,7 +59,7 @@ final class RoleMigrationCoverageTest extends TestCase
         $expected = [
             'core' => 24,
             'form' => 17,
-            'extended' => 20,
+            'extended' => 19,
             'interactive' => 28,
             'live' => 5,
             'marketing' => 22,
@@ -79,7 +79,7 @@ final class RoleMigrationCoverageTest extends TestCase
     {
         $union = array_merge(...array_values(self::tierCatalogs()));
 
-        self::assertCount(171, $union);
+        self::assertCount(170, $union);
         self::assertSame($union, array_values(array_unique($union)));
     }
 }
