@@ -1,5 +1,17 @@
 # Upgrade guide
 
+## 0.1.7
+
+`navbar` moved from the extended catalog to the core catalog. Look it up on `CoreRoleCatalog`, not `ExtendedRoleCatalog`.
+
+`page-header` is removed from the extended catalog and from every catalog in this package. Drop template or test lookups that still use that role id.
+
+```bash
+composer update symfinity/ux-blocks
+```
+
+The registry schema stays `1.4`. No config file changes.
+
 ## 0.1.6
 
 No breaking changes. Patch release: OOTB consumer verification handbook, PHPUnit bootstrap for split mirrors, and handbook index integration profile.

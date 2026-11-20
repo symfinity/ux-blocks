@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.7] - 2026-11-20
+
+### Changed
+
+- `navbar` is a core role and is no longer listed in the extended catalog
+- `page-header` is no longer listed in the extended catalog, or in any catalog in this package
+
+### Fixed
+
+- The CSS output normalizer rewrites single-quoted `data-ui-*` attribute values to double quotes, the same way it already rewrites unquoted values
+- PHPUnit bootstrap registers this package's PSR-4 prefixes from `composer.json` after loading the monorepo or package autoload, and narrows the decoded autoload sections before reading `psr-4`
+
 ## [0.1.6] - 2026-07-05
 
 ### Added
