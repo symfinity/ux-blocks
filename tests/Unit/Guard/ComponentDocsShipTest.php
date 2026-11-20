@@ -9,6 +9,9 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Component handbooks must ship in the Composer archive and show real child markup.
+ *
+ * Tier packages are siblings under packages/ in the product monorepo. The split
+ * mirror checkout has no siblings, so this class stays in the monorepo suite.
  */
 final class ComponentDocsShipTest extends TestCase
 {
